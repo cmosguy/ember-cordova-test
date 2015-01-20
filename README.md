@@ -1,53 +1,29 @@
 # Ember-cordova-test
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a practice project that experiments with the ember-cli addon [Ember-Cli-Cordova](https://github.com/poetic/ember-cli-cordova).
 
-## Prerequisites
+Setting up the project was pretty easy initially with ember cli.  Then the work done by the contributors at [poetic](https://github.com/poetic), especially, (@jakecraige)[https://twitter.com/jakecraige], made the process go much more smoothly to utilize the cordova utilities for extending an existing page to mobile.
 
-You will need the following things properly installed on your computer.
+## Background
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+I was initially experimenting with [Appgyver Steroids](http://www.appgyver.com/steroids) + Ember.js.  They have a great flow using what they call the Scanner.  A means of deploying Hybrid mobile apps to either Android or IPhone devices.  Things worked great with the Android platform and my SPA of my ember.js app.  Unfortunately, when I went to iOS, I quickly ran into many issues.  There is something in their Scanner wrapper app that broke the ability to do anything useful with the ember framework.  For exmaple, the input text box stop working quickly and did not allow the ember hooks to observe the data submitted in forms, which rendered the entire code useless on iOS devices.  Then, I heard about ember-cli-cordova and (@jakecraige)[https://twitter.com/jakecraige] successful addon and had to try it.  This project proves useful and I just wanted to share the starting point with others.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/cmosguy/ember-cordova-test` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
 
+
 ## Running / Development
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* If you want to get the live-reloading to work for *iOS* you have to do the following: 
+  * `ember cordova:build --platform=ios`
+  * `ember server`
+  * You should see the iOS Simulator with your app
+* For *Android*: 
+  * `ember cordova:build --platform=android`
+  * `ember server`
+  * Make sure you go through the steps to install a device in the AVD.  You should see the app live-reload in the emulator for Android.
 
