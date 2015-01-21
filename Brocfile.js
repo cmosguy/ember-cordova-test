@@ -19,6 +19,6 @@ var app = new EmberApp();
 
 app.import('bower_components/supersonic/css/supersonic.css');
 app.import('bower_components/supersonic/supersonic.js');
-app.import('bower_components/webcomponentsjs/webcomponents.js');
+//app.import('bower_components/webcomponentsjs/webcomponents.js');
 
 module.exports = app.toTree();
