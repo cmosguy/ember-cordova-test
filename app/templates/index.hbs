@@ -1,3 +1,14 @@
-{{input id='foo' value=foo}}
-foobar
-test: {{foo}}
+<div class="list">
+    <label class="item item-input">
+        {{input id='firstname' value=firstname placeholder='First Name'}}
+    </label>
+    <label class="item item-input">
+        {{input id='lastname' value=lastname placeholder='Last Name'}}
+    </label>
+</div>
+<p>
+    First Name check: {{firstname}}
+</p>
+<p>
+    Last Name check: {{lastname}}
+</p>
